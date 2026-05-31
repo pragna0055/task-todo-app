@@ -11,18 +11,8 @@ function App() {
         <Route path="/" element={<Login />} />
 
         <Route path="/register" element={<Register />} />
-
-        <Route
-  path="/dashboard"
-  element={
-    localStorage.getItem("token") ? (
-      <Dashboard />
-    ) : (
-      <Login />
-    )
-  }
-/>
-
+        
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );
